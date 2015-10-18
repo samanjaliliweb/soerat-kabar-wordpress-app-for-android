@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background_color">
+
+    <LinearLayout
+        android:id="@+id/lytRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/lblAlert"
+            android:text="@string/no_internet_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/subhead"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retry"
+            android:theme="@style/RaisedButtonStyle"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblNoResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_below="@+id/lytFilter"
+        android:text="@string/no_result"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/subhead"/>
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="@dimen/circleprogressbar_width"
+        android:layout_height="@dimen/circleprogressbar_height"
+        android:layout_below="@+id/lytFilter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"
+        app:mlpb_enable_circle_background="true"/>
+
+    <!-- Search form -->
+    <LinearLayout
+        android:id="@+id/lytFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color">
+        <EditText
+            android:id="@+id/txtSearchFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/search_box_height"
+            android:padding="@dimen/edittext_padding"
+            android:hint="@string/type_place_name"
+            android:textColorHint="@color/divider_color"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/subhead"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/search_box"/>
+    </LinearLayout>
+    <!-- End of search form -->
+
+    <!-- Locations in list view -->
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lytFilter"
+        android:visibility="gone"
+        android:layout_above="@+id/adView">
+    </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+    <!-- End of locations -->
+    <!-- Admob banner  -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+    <!-- End of admob banner -->
+</RelativeLayout>

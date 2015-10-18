@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout 
+        android:id="@+id/lytDetail"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone">
+	    
+    	<ScrollView 
+	        android:id="@+id/lytContent"
+	        android:layout_above="@+id/adView"
+	    	android:layout_width="match_parent"
+		    android:layout_height="match_parent">
+    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		    	android:layout_height="wrap_content">
+		    	
+		        <LinearLayout 
+		            android:id="@+id/lytContentMain"
+		            android:layout_width="match_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="vertical">
+		            
+		            <TextView
+				        android:id="@+id/lblDate"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/padding_main"
+						android:layout_marginRight="@dimen/padding_main"
+						android:layout_marginTop="@dimen/padding_main"
+						android:textColor="@color/text_sub_title"
+						style="@android:style/TextAppearance.Small"/>
+				    
+			         <TextView
+				        android:id="@+id/lblTitle"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/padding_main"
+						android:layout_marginRight="@dimen/padding_main"
+						android:textColor="@color/text_title"
+						android:textStyle="bold"
+						style="@android:style/TextAppearance.Large"/>
+			         
+			        <TextView
+				        android:id="@+id/lblAuthor"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/padding_main"
+						android:layout_marginRight="@dimen/padding_main"
+						android:textColor="@color/text_sub_title"
+						style="@android:style/TextAppearance.Medium"/>	
+			
+			      	<LinearLayout
+				        android:id="@+id/lytMedia"
+				        android:layout_width="match_parent"
+				        android:layout_height="@dimen/detail_thumb_height">
+					    
+					    <ImageView
+						    android:id="@+id/imgThumbnail"
+						    android:layout_width="match_parent"
+						    android:layout_height="match_parent"
+						    android:contentDescription="@string/app_name"
+						    android:background="@color/primary_color"
+						    android:scaleType="centerCrop"
+					        android:layout_marginTop="@dimen/padding_main"
+					        android:layout_marginBottom="@dimen/padding_main"/>	
+			   
+					</LinearLayout>
+		        </LinearLayout>
+
+		        <TextView 
+					android:id="@+id/txtDesc"
+					android:layout_below="@+id/lytContentMain" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					style="@android:style/TextAppearance.Medium"
+					android:lineSpacingExtra="5dp"
+					android:layout_marginLeft="@dimen/padding_main"
+					android:layout_marginRight="@dimen/padding_main"
+					android:layout_marginBottom="@dimen/padding_main"/>
+
+		        <android.support.v7.widget.AppCompatButton
+			        android:id="@+id/btnWeb"
+					android:layout_below="@+id/txtDesc" 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/padding_main"
+					android:layout_marginRight="@dimen/padding_main"
+			        android:layout_marginBottom="@dimen/padding_main"
+			        android:text="@string/btn_web"
+					android:theme="@style/RaisedButtonStyle"/>
+					
+		    </RelativeLayout>
+		    
+    	</ScrollView>
+    	
+	    <com.google.android.gms.ads.AdView
+		    android:id="@+id/adView"
+	       	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			ads:adUnitId="@string/banner_ad_unit_id"
+	        ads:adSize="SMART_BANNER"
+	        android:visibility="gone"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"/>
+	    
+    </RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/lytRetry"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_centerInParent="true"
+		android:gravity="center"
+		android:visibility="gone">
+		<TextView
+			android:id="@+id/lblAlert"
+			android:text="@string/no_internet_connection"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/primary_text"
+			android:textSize="@dimen/subhead"/>
+		<android.support.v7.widget.AppCompatButton
+			android:id="@+id/btnRetry"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/retry"
+			android:theme="@style/RaisedButtonStyle"/>
+	</LinearLayout>
+    
+    <TextView
+        android:id="@+id/lblNoResult"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/text_sub_title"
+		android:text="@string/lbl_no_result"
+		android:layout_centerInParent="true"
+		android:visibility="gone"
+		style="@android:style/TextAppearance.Medium"/>
+    
+    
+</RelativeLayout>

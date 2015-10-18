@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Soerat Kabar</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Facebook SDK integration. Insert your own Facebook app Id. -->
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID_HERE</string>
+    <!-- Twitter SDK integration. Insert your own Twitter key and secret key. -->
+    <string name="twitter_key">YOUR_TWITTER_CONSUMER_KEY</string>
+    <string name="twitter_secret">YOUR_TWITTER_SECRET_KEY</string>
+    <!-- Google Play url. Change your.package.name with your own package name. -->
+    <string name="google_play_url">https://play.google.com/store/apps/details?id=com.your.package</string>
+    <!-- Google Maps Android API key. Insert your own API key, you can get it via Google Console -->
+    <string name="google_map_api_key">YOUR_GOOGLE_MAPS_API_KEY</string>
+    <!-- Banner ad id. Insert your own banner id, you can get banner id via admob. -->
+    <string name="banner_ad_unit_id">BANNER_AD_UNIT_ID</string>
+    <!-- Interstitial ad id. Insert your own interstitial id, you can get interstitial id via admob. -->
+    <string name="interstitial_ad_unit_id">INTERSTITIAL_AD_UNIT_ID</string>
+
+    <!-- Default Message -->
+    <string name="lbl_no_result">No Result</string>
+    <string name="no_response">No Connection or Server Under Maintenance</string>
+    <string name="retry">Retry</string>
+    <string name="content_description">for youtube thumbnail</string>
+    <string name="user_id_alanschaller">127753524@N02</string>
+    <string name="user_id_pongodev">339951115</string>
+    <string name="api_key">9dded361ece50b664889f8f98f95eb87</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Alert message -->
+    <string name="no_result">No result.</string>
+    <string name="no_internet_connection">Check your connection and try again.</string>
+    <string name="type_place_name_first">Type place name first.</string>
+    <string name="response_error">Cannot connect to server.</string>
+    <string name="no_phone_available">This place does not have phone number.</string>
+    <string name="no_website_available">This place does not have website address.</string>
+
+    <!-- About preferences values -->
+    <string name="pref_app_title">Application Name</string>
+    <string name="pref_app_summary">Soerat Kabar</string>
+    <string name="pref_version_title">Build Version</string>
+    <string name="pref_version_summary">Version 2.0</string>
+    <string name="pref_developer_title">Developer</string>
+    <string name="pref_developer_summary">pongodev</string>
+    <string name="pref_copyright_title">Copyright</string>
+    <string name="pref_copyright_summary">Copyright 2014 pongodev. All rights reserved</string>
+    <string name="pref_share_title">Tell a Friend</string>
+    <string name="pref_share_summary">Tell your friend about this app</string>
+    <string name="pref_rate_review_title">Rate &amp; Review</string>
+    <string name="pref_rate_review_summary">Rate and review this app if you think it is awesome</string>
+
+    <!-- About preferences keys, DO NOT change preferences keys below -->
+    <string name="pref_share_key">prefShareKey</string>
+    <string name="pref_rate_review_key">prefRateReviewKey</string>
+
+    <!-- Sharing content -->
+    <string name="share_to">Share to</string>
+    <string name="subject">Hi, I just Find Interesting Place via Perkutut</string>
+    <string name="message">You can download Perkutut for Android at </string>
+
+    <!-- Drawer menu item and toolbar title  -->
+    <string name="latest_news">Latest News</string>
+    <string name="categories">Categories</string>
+    <string name="find">Find</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="about">About</string>
+
+    <string name="menu_previous">Previous</string>
+    <string name="menu_next">Next</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_stop">Stop</string>
+    <string name="menu_browser">Open in browser</string>
+
+    <!-- Social Title -->
+    <string name="facebook_title">Our Facebook</string>
+    <string name="twitter_title">Our Twitter</string>
+    <!-- Social URL -->
+    <string name="url_facebook">https://www.facebook.com/pongodev</string>
+    <string name="url_twitter">https://twitter.com/pongodev</string>
+    <string name="btn_web">Read on web</string>
+    <string name="type_place_name">Type place name</string>
+
+</resources>
